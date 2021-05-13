@@ -12,7 +12,7 @@ pipeline {
         stages {
                 stage('Git checkout'){
                         agent {
-				node {
+				label {
 					label 'git-checkout'
 					customworkspace '/var/lib/jenkins/workspace/cicdproject'
 				}
@@ -24,7 +24,7 @@ pipeline {
 
                 stage('Terraform init'){
                         agent {
-                                node {
+                                label {
                                         label 'terraform-init'
                                         customworkspace '/var/lib/jenkins/workspace/cicdproject'
                                 }
@@ -36,7 +36,7 @@ pipeline {
 
                 stage('Terraform apply'){
                         agent {
-                                node {
+                                label {
                                         label 'terraform-apply'
                                         customworkspace '/var/lib/jenkins/workspace/cicdproject'
                                 }
