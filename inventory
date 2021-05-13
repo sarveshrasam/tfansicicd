@@ -1,2 +1,0 @@
-[awshosts]
-35.175.176.178 ansible_user=ec2-user
